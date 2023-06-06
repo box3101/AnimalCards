@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import FlashcardList from './components/FlashcardList';
+import data from './data';
 
-function App() {
+const App = () => {
+
+  let [cards, setCards] = useState([]);
+  let [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setCards(data);
+    setLoading(false);
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    loading ? <div className='loader'></div> :
+      <div>
+        <h1>Animal Flashcards</h1>
+        <FlashcardList cards={cards} />
+      </div>
   );
 }
 
