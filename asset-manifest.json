@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AnimalCards/static/css/main.1a135ab3.css",
-    "main.js": "/AnimalCards/static/js/main.8383b3d0.js",
+    "main.css": "/AnimalCards/static/css/main.b0a13949.css",
+    "main.js": "/AnimalCards/static/js/main.1e07cf15.js",
     "index.html": "/AnimalCards/index.html",
-    "main.1a135ab3.css.map": "/AnimalCards/static/css/main.1a135ab3.css.map",
-    "main.8383b3d0.js.map": "/AnimalCards/static/js/main.8383b3d0.js.map"
+    "main.b0a13949.css.map": "/AnimalCards/static/css/main.b0a13949.css.map",
+    "main.1e07cf15.js.map": "/AnimalCards/static/js/main.1e07cf15.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a135ab3.css",
-    "static/js/main.8383b3d0.js"
+    "static/css/main.b0a13949.css",
+    "static/js/main.1e07cf15.js"
   ]
 }
