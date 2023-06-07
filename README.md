@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# 🚀 프로젝트 시작 동기 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트를 시작하게 된 가장 큰 이유는 바로 저의 리액트 학습 경험을 실제 프로젝트에 적용해 보고자 했던 열망 때문입니다.   
+돌이 아직 안된 9개월 아이가 있는데 아기를 위한 프로젝트가 어떤게 있나 생각해 보다가 플래시 카드 프로젝트를 시작하게 되었습니다.
+강의와 독학을 통해 배운 지식을 활용해 웹 어플리케이션을 만드는 것이 제가 이 프로젝트를 시작하게 된 핵심 동기였습니다.
 
-## Available Scripts
+리액트의 핵심 요소들, 컴포넌트 기반 설계, 상태 관리, 라이프사이클 메서드 등을 풍부하게 활용할 수 있는 이 프로젝트는 제가 배운 이론들이 실전에서 어떻게 작동하는지 체험할 수 있는 아주 훌륭한 기회였습니다.
 
-In the project directory, you can run:
+## ⏰ 제작 기간
 
-### `npm start`
+2023-06-03 ~ 2023-06-07 (4일)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🗂 폴더 구조
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**/animal-flash-cards**  
+├── node_modules/  
+├── public/  
+│   ├── index.html  
+│   ├── img / …  
+│   └── sounds / …  
+├── src/  
+│   ├── components/  
+│   │   ├── Flashcard.js  
+│   │   ├── FlashcardList.js  
+│   ├── App.js  
+│   ├── index.js  
+│   └── data.js  
+├── package.json  
+└── ...  
 
-### `npm test`
+## 🌟 주요 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **동물 플래시카드 표시**: 사용자는 각 동물의 이름과 이미지를 담은 플래시카드를 통해 다양한 동물들을 알아볼 수 있습니다.
 
-### `npm run build`
+2. **플래시카드 뒤집기**: 사용자가 플래시카드를 클릭하면, 카드가 뒤집혀 동물의 이름이 나타나며 동시에 해당 동물의 소리가 재생됩니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **더 많은 플래시카드 보기**: 처음에는 일정 수의 플래시카드만 표시되지만, "더 보기" 버튼을 클릭하면 추가적인 플래시카드들이 보여지게 됩니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **이미지 로딩 최적화**: 플래시카드는 모든 이미지가 완전히 로드된 후에만 보이게 됩니다. 이는 사용자 경험을 위한 세부적인 고려로, 로딩 중인 이미지로 인한 화면의 깜박임이나 레이아웃 변화를 최소화하는 역할을 합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📚 사용 라이브러리
 
-### `npm run eject`
+1. **React**: 웹 애플리케이션의 기본 틀을 구성하고, 컴포넌트 라이프사이클을 관리하기 위해 사용되었습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Create-react-app**: React 기반의 웹 애플리케이션을 손쉽게 만들 수 있도록 도와주는 보일러플레이트를 사용하였습니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **react-icons**: 웹 애플리케이션에 다양한 아이콘을 쉽게 적용할 수 있도록 도와주는 라이브러리입니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **react-router-dom**: 웹 애플리케이션 내부의 라우팅을 관리하기 위해 사용되었습니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **axios**: 서버와 클라이언트 간의 HTTP 통신을 쉽게 할 수 있게 도와주는 라이브러리입니다.
 
-## Learn More
+6. **styled-components**: 컴포넌트 스타일링을 CSS-in-JS 방식으로 쉽게 할 수 있게 도와주는 라이브러리입니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. **react-transition-group**: 컴포넌트 진입, 종료 등의 상황에 대해 애니메이션과 전환 효과를 적용할 수 있도록 도와주는 라이브러리입니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이러한 다양한 라이브러리들을 활용하면서 제가 배운 리액트에 대한 지식을 실질적으로 활용해 보았습니다. 이 과정에서 개념적으로 이해하던 내용들이 실질적으로 어떻게 적용되는지 보며, 또 어떤 부분들이 필요한지도 체감할 수 있었습니다. 이는 앞으로의 프로젝트에서도 큰 도움이 될 것이라 생각합니다.
