@@ -7,12 +7,22 @@ const App = () => {
 
   let [cards, setCards] = useState([]);
   let [loading, setLoading] = useState(true);
+  let [imageLoadCount, setImageLoadCount] = useState(0);
+  let totalImage = data.length; // 전체 이미지 수
 
   useEffect(() => {
-    setLoading(true);
     setCards(data);
-    setLoading(false);
   }, [])
+
+  useEffect(() => {
+    if (totalImage == imageLoadCount) {
+      setLoading(false)
+    }
+  }, [imageLoadCount, totalImage])
+
+  function handleImageLoad() {
+    setImageLoadCount(prevCount => prevCount + 1);
+  }
 
   function scrolltoTop() {
     window.scrollTo({
@@ -22,14 +32,32 @@ const App = () => {
   }
 
   return (
-    loading ? <div className='loader'></div> :
-      <div>
-        <h1>Animal Flashcards</h1>
-        <FlashcardList cards={cards} />
-        <button className="scroll-top-btn" onClick={scrolltoTop}>
-          <FiArrowUpCircle size={30} />
-        </button>
-      </div>
+    <div>
+      {
+        loading
+          ? (<div className='loader'></div>)
+          : (
+            <>
+              <h1>Animal Flashcards</h1>
+              <FlashcardList cards={cards} />
+              <button className="scroll-top-btn" onClick={scrolltoTop}>
+                <FiArrowUpCircle size={30} />
+              </button>
+            </>
+          )
+      }
+      {/* 모든 이미지 로드를 감지하여 imageLoadCount 상태를 업데이트 */}
+      {data.map((card, index) => (
+        <img
+          key={index}
+          src={card.image}
+          alt='이미지'
+          onLoad={handleImageLoad}
+          style={{ display: 'none' }}
+        />
+      ))}
+    </div>
+
   );
 }
 
