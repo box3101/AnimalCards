@@ -2,32 +2,37 @@ let data = [
   {
     "id": 1,
     "name": "강아지",
-    "image": "/img/a1.jpg"
+    "image": `${process.env.PUBLIC_URL + '/img/a1'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/a1'}.mp3`,
   },
   {
     "id": 2,
     "name": "고양이",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
+    "sound": `${process.env.PUBLIC_URL + '/sounds/a2'}.mp3`,
   },
   {
     "id": 3,
     "name": "사자",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg",
+    "sound": `${process.env.PUBLIC_URL + '/sounds/a3'}.mp3`,
   },
   {
     "id": 4,
-    "name": "기린",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Giraffe_Ithala_KZN_South_Africa_Luca_Galuzzi_2004.JPG"
+    "name": "원숭이",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Schimpanse_Zoo_Leipzig.jpg",
+    "sound": `${process.env.PUBLIC_URL + '/sounds/a4'}.mp3`,
   },
   {
     "id": 5,
     "name": "코끼리",
-    "image": "/img/a5.jpg"
+    "image": `${process.env.PUBLIC_URL + '/img/a5'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/a5'}.mp3`,
   },
   {
     "id": 6,
     "name": "토끼",
-    "image": "/img/a2.jpg"
+    "image": `${process.env.PUBLIC_URL + '/img/a2'}.jpg`
   },
   {
     "id": 7,
@@ -38,11 +43,6 @@ let data = [
     "id": 8,
     "name": "펭귄",
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg"
-  },
-  {
-    "id": 9,
-    "name": "원숭이",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Schimpanse_Zoo_Leipzig.jpg"
   },
   {
     "id": 10,

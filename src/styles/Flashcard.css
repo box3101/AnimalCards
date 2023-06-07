@@ -77,8 +77,8 @@ h1 {
 	justify-content: center;
 	background: linear-gradient(to right, #007cf0, #00b0ff);
 	color: #fff;
-	font-size: 5em;
-	letter-spacing: 2px;
+	font-size: 4.5em;
+	letter-spacing: -3px;
 	text-transform: uppercase;
 	font-weight: bold;
 	z-index: 1; /* 추가된 코드 */
@@ -157,7 +157,24 @@ h1 {
 .btn-wrap button:hover {
 	background-color: #0056b3;
 }
-
+.scroll-top-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px;
+	background: linear-gradient(to right, #007cf0, #00b0ff);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 999;
+}
+.scroll-top-btn:hover {
+	background-color: #d32f2f;
+}
+.scroll-top-button:active {
+	background-color: #b71c1c;
+}
 @media (max-width: 1200px) {
 	html {
 		font-size: 12px;
@@ -172,9 +189,12 @@ h1 {
 }
 @media (max-width: 900px) {
 	html {
-		font-size: 9px;
+		font-size: 8px;
 	}
 	.flashcard-wrap {
 		width: 47%;
+	}
+	.flashcard.flip .back {
+		letter-spacing: -2px;
 	}
 }
