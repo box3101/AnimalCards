@@ -3,7 +3,7 @@ import '../styles/Flashcard.css';
 import { useDispatch } from "react-redux";
 import { playAudio, stopAudio } from "../store/audioSlice";
 
-function Flashcard({ card, flipCardID, setFlipCardID, audio ,setAudio  }) {
+function Flashcard({ card, flipCardID, setFlipCardID, audio ,setAudio,translation}) {
 
   // 각 카드가 현재 뒤집혀 있는지 아닌지를 판단
   let isFlip = card.id === flipCardID;
@@ -36,7 +36,7 @@ function Flashcard({ card, flipCardID, setFlipCardID, audio ,setAudio  }) {
             <img src={card.image} className='flashcard-img' />
           </div>
           <div className="back">
-            {card.name}
+            {translation}
           </div>
         </div>
       </div>

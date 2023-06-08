@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Flashcard from "./Flashcard";
 import '../styles/FlashcardList.css';
+import { useTranslation } from 'react-i18next';
+
 
 function FlashcardList({ cards, audio, setAudio }) {
+  const { t } = useTranslation();
 
   // button 활성화
   let [isActive,setIsActive] = useState("");
@@ -14,7 +17,6 @@ function FlashcardList({ cards, audio, setAudio }) {
   let filterCards = selectedCategory == "전체" 
   ? cards
   : cards.filter(card => card.category == selectedCategory)
-  
 
   // // 카테고리 선택 핸들러
   function handleCategorySelect(category) {
@@ -41,7 +43,7 @@ function FlashcardList({ cards, audio, setAudio }) {
 
       <div className="flashcard-list">
         {
-          filterCards.slice(0, showCount).map((card) => <Flashcard key={card.id} card={card} flipCardID={flipCardID} setFlipCardID={setFlipCardID} audio={audio} setAudio={setAudio} />)
+          filterCards.slice(0, showCount).map((card) => <Flashcard key={card.id} card={card} flipCardID={flipCardID} setFlipCardID={setFlipCardID} audio={audio} setAudio={setAudio}  translation={t(card.id.toString())} />)
         }
       </div>
 

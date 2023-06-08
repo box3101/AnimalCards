@@ -216,6 +216,23 @@ h1 {
 .category-selector button:hover::after,.category-selector button.on::after{
 	display: none;
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.language-switcher label {
+  margin-right: 10px;
+	font-size: 16px;
+}
+
+.language-switcher select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 @media (max-width: 1200px) {
 	html {

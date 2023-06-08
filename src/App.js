@@ -2,8 +2,18 @@ import React, { useState, useEffect } from 'react';
 import FlashcardList from './components/FlashcardList';
 import data from './data';
 import { FiArrowUpCircle } from 'react-icons/fi'; // 추가
+import LanguageSwitcher from './components/LanguageSwitcher';
+import { changeLanguage } from './i18n/i18nextConfig';
 
 const App = () => {
+
+  // 언어 변경
+  let [language, setLanguage] = useState('ko'); // 기본 언어를 한국어로 설정
+
+  // 언어 변경함수
+  function changeLanguage(lang){
+    setLanguage(lang);
+  }
 
   // 데이터 저장
   let [cards, setCards] = useState([]);
@@ -46,7 +56,8 @@ const App = () => {
           ? (<div className='loader'></div>)
           : (
             <>
-              <h1>Animal Flashcards</h1>
+              <LanguageSwitcher changeLanguage={changeLanguage} />
+              <h1>Animal flashcards</h1>
               <FlashcardList cards={cards} audio={audio} setAudio={setAudio} />
               <button className="scroll-top-btn" onClick={scrolltoTop}>
                 <FiArrowUpCircle size={30} />
