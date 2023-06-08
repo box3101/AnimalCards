@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
 import '../styles/Flashcard.css';
+import { useDispatch } from "react-redux";
+import { playAudio, stopAudio } from "../store/audioSlice";
 
-function Flashcard({ card, flipCardID, setFlipCardID }) {
+function Flashcard({ card, flipCardID, setFlipCardID, audio ,setAudio  }) {
 
   // 각 카드가 현재 뒤집혀 있는지 아닌지를 판단
   let isFlip = card.id === flipCardID;
-  let [audio, setAudio] = useState(null);
 
   function handleCardClick() {
-    if (!isFlip) {
-      setFlipCardID(card.id)
 
-      // 동물 소리 재생
-      let newAudio = new Audio(card.sound);
+    if(audio){
+      audio.pause();
+    }
+
+    // 카드가 현재 뒤집혀 있지 않을때
+    if (!isFlip) {
+      setFlipCardID(card.id);
+      const newAudio = new Audio(card.sound);
       newAudio.play();
       setAudio(newAudio);
     }
+    // 뒤집혀 있을때
     else {
       setFlipCardID(null);
-
-      // 재생중인 오디오가 있으면 멈춤
-      if (audio) {
-        audio.pause();
-        setAudio(null);
-      }
+      setAudio(null);
     }
   }
 

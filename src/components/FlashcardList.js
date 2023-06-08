@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Flashcard from "./Flashcard";
 import '../styles/FlashcardList.css';
 
-function FlashcardList({ cards }) {
+function FlashcardList({ cards ,audio ,setAudio}) {
 
   let [flipCardID, setFlipCardID] = useState(null);
   let [showCount, setShowCount] = useState(15);
@@ -15,7 +15,7 @@ function FlashcardList({ cards }) {
     <>
       <div className="flashcard-list">
         {
-          cards.slice(0, showCount).map((card) => <Flashcard card={card} flipCardID={flipCardID} setFlipCardID={setFlipCardID} />)
+          cards.slice(0, showCount).map((card) => <Flashcard card={card} flipCardID={flipCardID} setFlipCardID={setFlipCardID} audio={audio} setAudio={setAudio}/>)
         }
       </div>
 

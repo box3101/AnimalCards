@@ -13,6 +13,8 @@ const App = () => {
   let [imageLoadCount, setImageLoadCount] = useState(0);
   // 전체 이미지 수
   let totalImage = data.length;
+  // 오디오 정지,시작
+  let [audio, setAudio] = useState(null);
 
   useEffect(() => {
     setCards(data);
@@ -20,7 +22,7 @@ const App = () => {
 
   // 전체이미지 = 로드된카운트가 일치시 로딩바 없앰
   useEffect(() => {
-    if (totalImage == imageLoadCount) {
+    if (totalImage === imageLoadCount) {
       setLoading(false)
     }
   }, [imageLoadCount, totalImage])
@@ -45,7 +47,7 @@ const App = () => {
           : (
             <>
               <h1>Animal Flashcards</h1>
-              <FlashcardList cards={cards} />
+              <FlashcardList cards={cards} audio={audio} setAudio={setAudio} />
               <button className="scroll-top-btn" onClick={scrolltoTop}>
                 <FiArrowUpCircle size={30} />
               </button>
