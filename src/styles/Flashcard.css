@@ -26,7 +26,7 @@ h1 {
 }
 .flashcard-wrap {
 	overflow: hidden;
-	height: 200px;
+	height: 250px;
 	width: 23%;
 	display: flex;
 	flex-wrap: nowrap;

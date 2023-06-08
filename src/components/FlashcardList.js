@@ -8,7 +8,6 @@ function FlashcardList({ cards }) {
   let [showCount, setShowCount] = useState(15);
 
   function handleShowMore(e) {
-    e.preventDefault();
     setShowCount(showCount + 5);
   }
 

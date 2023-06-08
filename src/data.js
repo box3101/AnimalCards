@@ -1,103 +1,136 @@
 let data = [
+  // 가축
   {
     "id": 1,
-    "name": "강아지",
-    "image": `${process.env.PUBLIC_URL + '/img/a1'}.jpg`,
-    "sound": `${process.env.PUBLIC_URL + '/sounds/a1'}.mp3`,
+    "name": "거위",
+    "image": `${process.env.PUBLIC_URL + '/img/goose'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/goose'}.mp3`,
   },
   {
     "id": 2,
-    "name": "고양이",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
-    "sound": `${process.env.PUBLIC_URL + '/sounds/a2'}.mp3`,
+    "name": "소",
+    "image": `${process.env.PUBLIC_URL + '/img/cow'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/cow'}.mp3`,
   },
   {
     "id": 3,
-    "name": "사자",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg",
-    "sound": `${process.env.PUBLIC_URL + '/sounds/a3'}.mp3`,
+    "name": "양",
+    "image": `${process.env.PUBLIC_URL + '/img/sheep'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/sheep'}.mp3`,
   },
   {
     "id": 4,
-    "name": "원숭이",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Schimpanse_Zoo_Leipzig.jpg",
-    "sound": `${process.env.PUBLIC_URL + '/sounds/a4'}.mp3`,
+    "name": "말",
+    "image": `${process.env.PUBLIC_URL + '/img/horse'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/horse'}.mp3`,
   },
   {
     "id": 5,
-    "name": "코끼리",
-    "image": `${process.env.PUBLIC_URL + '/img/a5'}.jpg`,
-    "sound": `${process.env.PUBLIC_URL + '/sounds/a5'}.mp3`,
+    "name": "닭",
+    "image": `${process.env.PUBLIC_URL + '/img/chicken'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/chicken'}.mp3`,
   },
   {
     "id": 6,
-    "name": "토끼",
-    "image": `${process.env.PUBLIC_URL + '/img/a2'}.jpg`
+    "name": "고양이",
+    "image": `${process.env.PUBLIC_URL + '/img/cat'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/cat'}.mp3`,
   },
   {
     "id": 7,
-    "name": "판다",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Panda_Cub_from_Wolong,_Sichuan,_China.JPG"
+    "name": "강아지",
+    "image": `${process.env.PUBLIC_URL + '/img/dog'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/dog'}.mp3`,
   },
   {
     "id": 8,
-    "name": "펭귄",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg"
+    "name": "코끼리",
+    "image": `${process.env.PUBLIC_URL + '/img/elephant'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/elephant'}.mp3`,
+  },
+  {
+    "id": 9,
+    "name": "원숭이",
+    "image": `${process.env.PUBLIC_URL + '/img/monkey'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/monkey'}.mp3`,
   },
   {
     "id": 10,
-    "name": "호랑이",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg"
+    "name": "쥐",
+    "image": `${process.env.PUBLIC_URL + '/img/rat'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/rat'}.mp3`,
+  },
+  {
+    "id": 11,
+    "name": "사자",
+    "image": `${process.env.PUBLIC_URL + '/img/lion'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/lion'}.mp3`,
   },
   {
     "id": 12,
-    "name": "북극곰",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Polar_Bear_-_Alaska_%28cropped%29.jpg"
+    "name": "뱀",
+    "image": `${process.env.PUBLIC_URL + '/img/snake'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/snake'}.mp3`,
   },
   {
     "id": 13,
-    "name": "부엉이",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFO9ngpPq7Ke8BT9EG8NoFSEyc51NcpMk76aZbOL9xRgmq4AkYT4q-SnbpXns9Fww8x8&usqp=CAU"
+    "name": "호랑이",
+    "image": `${process.env.PUBLIC_URL + '/img/tiger'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/tiger'}.mp3`,
   },
   {
     "id": 14,
     "name": "늑대",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS725Md-WnATqxl5MlaFGctFBPoiGT31nhhJw&usqp=CAU"
+    "image": `${process.env.PUBLIC_URL + '/img/wolf'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/wolf'}.mp3`,
   },
   {
     "id": 15,
-    "name": "독수리",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/%C3%81guila_calva.jpg"
+    "name": "삼색새",
+    "image": `${process.env.PUBLIC_URL + '/img/three_color_bird'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/three_color_bird'}.mp3`,
   },
   {
     "id": 16,
-    "name": "코알라",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Koala_climbing_tree.jpg"
+    "name": "참새",
+    "image": `${process.env.PUBLIC_URL + '/img/sparrow'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/sparrow'}.mp3`,
   },
   {
     "id": 17,
-    "name": "사슴",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZov5Nv6SwEhhJ8iEl8weLEC69crSsKvGuWA&usqp=CAU"
+    "name": "뻐꾸기",
+    "image": `${process.env.PUBLIC_URL + '/img/cuckoo'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/cuckoo'}.mp3`,
   },
   {
     "id": 18,
-    "name": "원숭이",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmelSV87zcjrKFVADDMKN-98hwDpIXB3H1FQ&usqp=CAU"
+    "name": "까마귀",
+    "image": `${process.env.PUBLIC_URL + '/img/crow'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/crow'}.mp3`,
   },
   {
     "id": 19,
-    "name": "하이에나",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_2jLRmH_oJV4j26z088WSLTaroJmMp4Bog&usqp=CAU"
+    "name": "벌",
+    "image": `${process.env.PUBLIC_URL + '/img/bee'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/bee'}.mp3`,
   },
   {
     "id": 20,
-    "name": "사막여우",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFBmdJHWl9g3344gayltBpYGUDUEqNnddI6g&usqp=CAU"
+    "name": "파리",
+    "image": `${process.env.PUBLIC_URL + '/img/fly'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/fly'}.mp3`,
   },
   {
     "id": 21,
-    "name": "앵무새",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTNdyztmaglZC8jOexzTtxauL567lRLfKkA&usqp=CAU"
+    "name": "모기",
+    "image": `${process.env.PUBLIC_URL + '/img/mosquito'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/mosquito'}.mp3`,
+  },
+  {
+    "id": 22,
+    "name": "귀뚜라미",
+    "image": `${process.env.PUBLIC_URL + '/img/cricket'}.jpg`,
+    "sound": `${process.env.PUBLIC_URL + '/sounds/cricket'}.mp3`,
   },
 ]
 
