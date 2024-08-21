@@ -15,7 +15,6 @@
 
 ## 🌐 사이트 구경하기
 
-git 주소 : https://github.com/box3101/AnimalCards  
 사이트 주소 : https://box3101.github.io/AnimalCards/
 
 ## 🗂 폴더 구조
